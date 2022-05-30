@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form class="main">
+      <div class="calculator">
+        <div class="display">
+          <input disabled type="text" class="upper-field" />
+          <input disabled type="text" value="0" class="input-field" />
+        </div>
+        <div class="keyboard">
+          <!-- Numbers -->
+          <button class="btn number">9</button>
+          <button class="btn number">8</button>
+          <button class="btn number">7</button>
+          <button class="btn number">4</button>
+          <button class="btn number">5</button>
+          <button class="btn number">6</button>
+          <button class="btn number">1</button>
+          <button class="btn number">2</button>
+          <button class="btn number">3</button>
+          <button class="btn number" id="zero">0</button>
+          <!-- Operators -->
+          <button class="btn operator" id="divide">/</button>
+          <button class="btn operator" id="multiply">*</button>
+          <button class="btn operator" id="subtract">-</button>
+          <button class="btn operator" id="add">+</button>
+          <button class="btn" id="decimal">.</button>
+          <button class="btn operator" id="equals">=</button>
+          <!-- Clear -->
+          <button class="btn clear" id="clear">CE</button>
+          <button class="btn clear" id="clear-all">C</button>
+        </div>
+      </div>
+    </form>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

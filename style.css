@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap');
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 400px;
+  height: 600px;
+
+  display: grid;
+  justify-content: stretch;
+  align-content: stretch;
+
+  margin: auto;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: white;
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr;
+
+  background: rgb(52, 52, 52);
+  background: linear-gradient(
+    180deg,
+    rgba(52, 52, 52, 1) 0%,
+    rgba(0, 0, 0, 1) 55%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  border-radius: 35px;
+}
+
+.display {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.input-field {
+  width: 350px;
+  font-family: 'Jura', sans-serif;
+  font-size: 40px;
+  padding-right: 27px;
+  text-align: right;
+  color: white;
+  border: none;
+  border-bottom: #ffc700 solid 1px;
+  background-color: inherit;
+}
+
+.upper-field {
+  width: 350px;
+  font-family: 'Jura', sans-serif;
+  font-size: 18px;
+  padding-right: 27px;
+  text-align: right;
+  color: white;
+  border: none;
+  background-color: inherit;
+}
+
+input:focus {
+  outline: none;
+}
+
+.keyboard {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+
+  padding: 15px;
+}
+
+.btn {
+  border-radius: 10px;
+  border: none;
+  background-color: inherit;
+  color: white;
+  font-size: 24px;
+  font-family: 'Jura', sans-serif;
+}
+
+.btn:hover {
+  background-color: rgb(62, 62, 62);
+}
+
+.btn:active {
+  background-color: inherit;
+}
+
+#clear {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#clear:hover {
+  background-color: orangered;
+}
+11 #clear:active {
+  background-color: white;
+}
+
+#clear-all {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#clear-all:hover {
+  background-color: orange;
+}
+
+#clear-all:active {
+  background-color: white;
+}
+
+#divide {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+#multiply {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+#subtract {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+#add {
+  grid-column: 4;
+  grid-row: 3;
+}
+
+#equals {
+  grid-column: 4;
+  grid-row: 4 / 6;
+  color: #ffc700;
+}
+
+#decimal {
+  grid-column: 3;
+  grid-row: 5;
+}
+
+#zero {
+  grid-column: 1 / 3;
+  grid-row: 5;
+}
