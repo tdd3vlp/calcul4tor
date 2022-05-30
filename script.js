@@ -64,7 +64,12 @@ function inputOperation(operation) {
       pendingOperation = operation;
     } else {
       upperField.value = currentNumber;
-      display.value = operation;
+      if (operation === '=') {
+        display.value = currentNumber;
+        upperField.value = '';
+      } else {
+        display.value = operation;
+      }
       pendingOperation = operation;
     }
   }
