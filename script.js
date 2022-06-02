@@ -43,15 +43,15 @@ function inputOperation(operation) {
   } else {
     newNumber = true;
     if (pendingOperation === '+') {
-      currentNumber += +localNumber;
+      currentNumber += Math.round(localNumber * 100) / 100;
     } else if (pendingOperation === '-') {
-      currentNumber -= +localNumber;
+      currentNumber -= Math.round(localNumber * 100) / 100;
     } else if (pendingOperation === '*') {
-      currentNumber *= +localNumber;
+      currentNumber *= Math.round(localNumber * 100) / 100;
     } else if (pendingOperation === '/') {
-      currentNumber /= +localNumber;
+      currentNumber /= Math.round(localNumber * 100) / 100;
     } else {
-      currentNumber = localNumber;
+      currentNumber = Math.round(localNumber * 100) / 100;
     }
     if (
       upperField.value.endsWith('+') ||
@@ -60,13 +60,13 @@ function inputOperation(operation) {
       upperField.value.endsWith('/')
     ) {
       upperField.value += localNumber;
-      display.value = currentNumber;
+      display.value = Math.round(currentNumber * 100) / 100;
       pendingOperation = operation;
     } else {
       upperField.value = currentNumber;
       if (operation === '=') {
         display.value = currentNumber;
-        upperField.value = '';
+        upperField.value = 'The result is ↓';
       } else {
         display.value = operation;
       }
@@ -85,13 +85,13 @@ function inputOperation(operation) {
   } else {
     newNumber = true;
     if (pendingOperation === '+') {
-      currentNumber += +localNumber;
+      currentNumber += Math.round(localNumber * 100) / 100;
     } else if (pendingOperation === '-') {
-      currentNumber -= +localNumber;
+      currentNumber -= Math.round(localNumber * 100) / 100;
     } else if (pendingOperation === '*') {
-      currentNumber *= +localNumber;
+      currentNumber *= Math.round(localNumber * 100) / 100;
     } else if (pendingOperation === '/') {
-      currentNumber /= +localNumber;
+      currentNumber /= Math.round(localNumber * 100) / 100;
     } else {
       currentNumber = localNumber;
     }
